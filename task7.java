@@ -1,4 +1,4 @@
-public class DigitSumStream {
+public class task7{
 
     public static int digitSum(int num, String opt) {
         boolean isEvenMode = opt.equalsIgnoreCase("even");
