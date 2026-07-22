@@ -1,4 +1,4 @@
-public class task {
+public class task6 {
 
     public static void printAllPairs(int[] arr) {
         if (arr == null || arr.length == 0) return;
