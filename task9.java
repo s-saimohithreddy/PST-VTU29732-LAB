@@ -1,4 +1,3 @@
-# Function to check palindrome number
 def is_palindrome(num):
     original = num
     reverse = 0
@@ -10,10 +9,8 @@ def is_palindrome(num):
 
     return original == reverse
 
-# Input from user
 num = int(input("Enter a number: "))
 
-# Check and display result
 if is_palindrome(num):
     print(num, "is a Palindrome number.")
 else:
