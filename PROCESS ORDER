@@ -1,0 +1,16 @@
+public class CustomerOrderFunction{
+
+    static void processOrder(double amount, Function<Double, Double> operation) {
+        double result = operation.apply(amount);
+        System.out.println("Final Amount: " + result);
+    }
+
+    public static void main(String[] args) {
+
+        double amount = 1000;
+
+        // First Order - 10% Discount
+        processOrder(amount, a -> a - (a * 0.10));
+
+        // Second Order - 20% Discount
+        processOrder(amount, a -> a - (a * 0.20));
