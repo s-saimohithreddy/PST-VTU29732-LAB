@@ -1,0 +1,44 @@
+import java.util.*;
+
+public class task7 {
+
+    public static int diagonalDifference(int[][] arr) {
+        int n = arr.length;
+
+        int leftDiagonal = 0;
+        int rightDiagonal = 0;
+
+        for (int i = 0; i < n; i++) {
+            // Primary diagonal
+            leftDiagonal += arr[i][i];
+
+            // Secondary diagonal
+            rightDiagonal += arr[i][n - 1 - i];
+        }
+
+        return Math.abs(leftDiagonal - rightDiagonal);
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Read matrix size
+        int n = sc.nextInt();
+
+        int[][] arr = new int[n][n];
+
+        // Read matrix elements
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        int result = diagonalDifference(arr);
+
+        System.out.println(result);
+
+        sc.close();
+    }
+}
